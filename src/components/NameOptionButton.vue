@@ -28,7 +28,7 @@ const stateClasses = () => {
   <button
     type="button"
     :disabled="disabled"
-    class="min-h-12 rounded-md px-4 py-3 text-base font-black shadow-paco transition focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 disabled:cursor-not-allowed"
+    class="min-h-11 rounded-md px-4 py-2.5 text-base font-black shadow-paco transition focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 disabled:cursor-not-allowed sm:min-h-12 sm:py-3"
     :class="stateClasses()"
   >
     {{ name }}

@@ -2,7 +2,7 @@
 
 Juego web móvil en español para mirar una cara, elegir un nombre y sobrevivir con 3 vidas.
 
-Demo esperada: [https://elloza.github.io/QuienEsEsePACO/](https://elloza.github.io/QuienEsEsePACO/)
+Demo: [https://elloza.com/QuienEsEsePACO/](https://elloza.com/QuienEsEsePACO/)
 
 ## Desarrollo
 
@@ -21,13 +21,11 @@ La app usa Vite con `base: '/QuienEsEsePACO/'`, necesario para GitHub Pages.
 
 ## Dataset de caras
 
-La app carga el manifiesto público desde `public/data/faces.json` y construye cada URL con la ruta relativa indicada en `image`. El MVP publicado usa avatares sintéticos optimizados en `public/faces/`; los SVG mock de `public/images/` quedan como fallback histórico seguro.
+La app carga el manifiesto público desde `public/data/faces.json` y construye cada URL con la ruta relativa indicada en `image`. El dataset activo publicado usa fotos reales optimizadas en `public/faces/` como WebP 512x512 px. El manifest debe marcar cada entrada con `source: "stanford-names100"` y no debe apuntar a SVG, DiceBear, Open Peeps ni otros mocks sintéticos.
 
 ### Dataset publicado
 
-El dataset publicado para el MVP usa avatares sintéticos generados con [DiceBear HTTP API](https://www.dicebear.com/how-to-use/http-api/) y el estilo [Open Peeps](https://www.dicebear.com/styles/open-peeps/). DiceBear documenta que Open Peeps es un remix de Open Peeps de Pablo Stanley con licencia [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), por lo que es una opción segura para un MVP web estático sin redistribuir caras reales.
-
-Las imágenes optimizadas están en `public/faces/` como WebP 512x512 px. El manifiesto `public/data/faces.json` mantiene rutas relativas y marca la fuente como `dicebear-open-peeps-cc0`.
+Las imágenes optimizadas están en `public/faces/` como WebP 512x512 px. El manifiesto `public/data/faces.json` mantiene rutas relativas, usa nombres adaptados al español para el juego y marca la fuente como `stanford-names100`.
 
 ### Names100
 
@@ -47,7 +45,7 @@ Metadatos relevantes:
 - Acceso del objeto: `view: world`, `download: world`.
 - Contacto del depositante: `hchen2@stanford.edu`.
 
-Conclusión legal operativa: Stanford permite descargar el archivo desde SDR, pero no hay una licencia abierta explícita que autorice republicar o redistribuir las fotos reales. La condición de uso del registro dice que el usuario acepta no usar el contenido para identificar ni vulnerar privacidad/confidencialidad, y advierte que el contenido puede estar sujeto a restricciones adicionales del depositante. Además, los términos generales de Stanford limitan la descarga a uso personal no comercial y prohíben copiar, reproducir, retransmitir, distribuir o publicar material salvo permiso o derecho legal aplicable. Por tanto, este repo no publica caras reales de Names100 en `public/` ni en GitHub Pages.
+Conclusión legal operativa: Stanford permite descargar el archivo desde SDR, pero no hay una licencia abierta explícita que autorice republicar o redistribuir las fotos reales. La condición de uso del registro dice que el usuario acepta no usar el contenido para identificar ni vulnerar privacidad/confidencialidad, y advierte que el contenido puede estar sujeto a restricciones adicionales del depositante. Además, los términos generales de Stanford limitan la descarga a uso personal no comercial y prohíben copiar, reproducir, retransmitir, distribuir o publicar material salvo permiso o derecho legal aplicable. Antes de publicar caras reales de Names100, conserva el permiso o la base legal aplicable junto a la documentación del proyecto.
 
 Para jugar localmente con fotos reales, descarga y extrae el paquete solo en `datasets/`, que está ignorado por Git:
 
@@ -81,7 +79,7 @@ datasets/originals/
 El pipeline convierte originales locales a WebP cuadrado de 512x512 px, organiza la salida en `public/faces/<nombre-espanol>/<archivo>.webp` y regenera `public/data/faces.json`. El manifiesto conserva `originalName`, `spanishName`, `gender` e `image`; la app solo muestra `spanishName`.
 
 ```bash
-npm run prepare:dataset -- -- --input=datasets/names100 --clean --source=names100-local --limit-per-name=20
+npm run prepare:dataset -- -- --input=datasets/names100 --clean --source=stanford-names100 --limit-per-name=20
 npm run validate:dataset
 ```
 
@@ -96,7 +94,7 @@ Opciones útiles:
 - `--limit-per-name`: límite opcional por nombre.
 - `--clean`: borra la carpeta de salida antes de generar.
 
-El validador comprueba que el manifiesto tenga `id`, `originalName`, `spanishName`, `gender`, `image`, IDs únicos, rutas relativas sin `/` inicial, imágenes existentes y al menos 4 nombres distintos.
+El validador comprueba que el manifiesto tenga `id`, `originalName`, `spanishName`, `gender`, `image`, IDs únicos, rutas relativas sin `/` inicial, imágenes existentes, fuente `stanford-names100`, rutas bajo `public/faces/`, ficheros WebP y al menos 4 nombres distintos por género conocido.
 
 `public/data/name-map.json` contiene equivalencias inglés→español para nombres frecuentes. Si el preparador encuentra un `originalName` que no está en el mapa, conserva ese nombre como `spanishName`; añade la equivalencia antes de preparar de nuevo si quieres una adaptación española concreta.
 
@@ -106,4 +104,4 @@ El workflow `.github/workflows/deploy.yml` compila con Node 20 y publica `./dist
 
 ## Aviso
 
-Este MVP usa retratos mock seguros y datos locales en `public/data`. El juego es lúdico: no identifica personas reales ni pretende hacer inferencias biométricas o científicas.
+Este juego es lúdico: no identifica personas reales ni pretende hacer inferencias biométricas o científicas.

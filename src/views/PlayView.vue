@@ -63,37 +63,41 @@ const restart = () => {
 </script>
 
 <template>
-  <main class="mx-auto min-h-screen w-full max-w-3xl px-4 py-5">
+  <main class="mx-auto flex h-[100dvh] w-full max-w-3xl flex-col overflow-hidden px-4 py-3 sm:py-5">
     <ExtraLifeAnimation :show="showExtraLife" />
 
-    <div v-if="isLoading" class="grid min-h-screen place-items-center text-center">
+    <div v-if="isLoading" class="grid h-full min-h-0 place-items-center text-center">
       <p class="text-lg font-black text-paco-card">Cargando PACOS...</p>
     </div>
 
-    <div v-else-if="error" class="grid min-h-screen place-items-center text-center">
+    <div v-else-if="error" class="grid h-full min-h-0 place-items-center text-center">
       <section class="rounded-lg bg-paco-card p-5 text-paco-bg">
         <p class="font-black">{{ error }}</p>
         <PrimaryButton class="mt-4" @click="loadDataset">Reintentar</PrimaryButton>
       </section>
     </div>
 
-    <div v-else-if="game && currentQuestion" class="flex min-h-screen flex-col gap-4 pb-5">
-      <GameHeader :lives="game.state.lives" :score="game.state.score" :streak="game.state.streak">
+    <div v-else-if="game && currentQuestion" class="flex h-full min-h-0 flex-col gap-2.5 sm:gap-4">
+      <GameHeader class="shrink-0" :lives="game.state.lives" :score="game.state.score" :streak="game.state.streak">
         <template #logo>
           <PacoLogo />
         </template>
       </GameHeader>
 
-      <div class="flex items-center justify-between text-sm font-bold text-paco-card/80">
+      <div class="flex shrink-0 items-center justify-between text-xs font-bold text-paco-card/80 sm:text-sm">
         <span>Pregunta {{ game.state.questionNumber }}</span>
         <span>Mejor racha {{ game.state.bestStreak }}</span>
       </div>
 
-      <FaceCard :image-url="currentImage" :animate-incorrect="game.state.isCorrect === false" />
+      <FaceCard class="min-h-0 flex-1" :image-url="currentImage" :animate-incorrect="game.state.isCorrect === false" />
 
-      <FeedbackBanner :is-correct="game.state.isCorrect" :correct-name="currentQuestion.correctName" />
+      <FeedbackBanner
+        class="shrink-0"
+        :is-correct="game.state.isCorrect"
+        :correct-name="currentQuestion.correctName"
+      />
 
-      <section class="grid grid-cols-1 gap-3 sm:grid-cols-2" aria-label="Opciones de nombre">
+      <section class="grid shrink-0 grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3" aria-label="Opciones de nombre">
         <NameOptionButton
           v-for="option in currentQuestion.options"
           :key="`${currentQuestion.questionNumber}-${option}`"
@@ -107,7 +111,7 @@ const restart = () => {
       </section>
     </div>
 
-    <div v-else class="grid min-h-screen place-items-center">
+    <div v-else class="grid h-full min-h-0 place-items-center">
       <PrimaryButton @click="restart">Empezar partida</PrimaryButton>
     </div>
   </main>

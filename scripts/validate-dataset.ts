@@ -19,6 +19,8 @@ type ValidationOptions = {
 
 const knownGenders = ['male', 'female'] as const
 const allowedGenders = new Set([...knownGenders, 'unknown'])
+const requiredSource = 'stanford-names100'
+const syntheticPattern = /dicebear|open[-\s]?peeps|mock|synthetic|avatar/i
 const args = process.argv.slice(2)
 
 function readOption(name: string, fallback: string): string {
@@ -91,12 +93,28 @@ async function validateDataset(options: ValidationOptions): Promise<void> {
       fail(`entry ${index} has unsupported gender "${face.gender}"; expected male, female, or unknown`)
     }
 
+    if (face.source !== requiredSource) {
+      fail(`entry ${index} must use source "${requiredSource}", found "${face.source ?? 'missing'}"`)
+    }
+
+    if (syntheticPattern.test(face.source) || syntheticPattern.test(face.image)) {
+      fail(`entry ${index} appears to reference a synthetic image source: ${face.id}`)
+    }
+
     const existingGender = genderByName.get(face.spanishName)
     if (existingGender && existingGender !== face.gender) {
       fail(`name "${face.spanishName}" appears with multiple genders: ${existingGender}, ${face.gender}`)
     }
 
     assertRelativePublicPath(face.image)
+
+    if (!face.image.startsWith('faces/')) {
+      fail(`image path must point inside public/faces/: ${face.image}`)
+    }
+
+    if (path.posix.extname(face.image).toLowerCase() !== '.webp') {
+      fail(`image path must point to an optimized WebP file: ${face.image}`)
+    }
 
     const imageFile = path.join(options.publicDir, ...face.image.split('/'))
     await access(imageFile).catch(() => fail(`image file does not exist: ${face.image}`))

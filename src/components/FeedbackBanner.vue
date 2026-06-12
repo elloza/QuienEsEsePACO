@@ -8,7 +8,7 @@ defineProps<{
 <template>
   <div
     v-if="isCorrect !== null"
-    class="rounded-md px-4 py-3 text-center text-sm font-black"
+    class="rounded-md px-3 py-2 text-center text-sm font-black sm:px-4 sm:py-3"
     :class="isCorrect ? 'bg-paco-correct text-paco-bg' : 'bg-paco-incorrect text-white'"
     role="status"
     aria-live="polite"
