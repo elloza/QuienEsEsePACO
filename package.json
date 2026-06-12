@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vue-tsc -b && vite build && node scripts/create-spa-fallback.cjs",
     "preview": "vite preview",
     "prepare:dataset": "tsx scripts/prepare-dataset.ts",
     "validate:dataset": "tsx scripts/validate-dataset.ts"
