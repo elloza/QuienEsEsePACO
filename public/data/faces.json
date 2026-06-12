@@ -1,62 +1,146 @@
 [
   {
-    "id": "paco-01",
-    "name": "Francisco",
-    "image": "images/paco-01.svg",
-    "source": "mock"
+    "id": "alejandro-0001",
+    "name": "Alejandro",
+    "image": "faces/alejandro/alejandro-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
   },
   {
-    "id": "paco-02",
-    "name": "Paco",
-    "image": "images/paco-02.svg",
-    "source": "mock"
+    "id": "alejandro-0002",
+    "name": "Alejandro",
+    "image": "faces/alejandro/alejandro-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
   },
   {
-    "id": "paco-03",
-    "name": "Francis",
-    "image": "images/paco-03.svg",
-    "source": "mock"
+    "id": "alvaro-0001",
+    "name": "Álvaro",
+    "image": "faces/alvaro/alvaro-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
   },
   {
-    "id": "paco-04",
-    "name": "Curro",
-    "image": "images/paco-04.svg",
-    "source": "mock"
+    "id": "alvaro-0002",
+    "name": "Álvaro",
+    "image": "faces/alvaro/alvaro-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
   },
   {
-    "id": "paco-05",
-    "name": "Fran",
-    "image": "images/paco-05.svg",
-    "source": "mock"
+    "id": "carmen-0001",
+    "name": "Carmen",
+    "image": "faces/carmen/carmen-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
   },
   {
-    "id": "paco-06",
-    "name": "Quico",
-    "image": "images/paco-06.svg",
-    "source": "mock"
+    "id": "carmen-0002",
+    "name": "Carmen",
+    "image": "faces/carmen/carmen-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
   },
   {
-    "id": "paco-07",
-    "name": "Pancho",
-    "image": "images/paco-07.svg",
-    "source": "mock"
+    "id": "diego-0001",
+    "name": "Diego",
+    "image": "faces/diego/diego-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
   },
   {
-    "id": "paco-08",
-    "name": "Cisco",
-    "image": "images/paco-08.svg",
-    "source": "mock"
+    "id": "diego-0002",
+    "name": "Diego",
+    "image": "faces/diego/diego-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
   },
   {
-    "id": "paco-09",
-    "name": "Paquito",
-    "image": "images/paco-09.svg",
-    "source": "mock"
+    "id": "elena-0001",
+    "name": "Elena",
+    "image": "faces/elena/elena-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
   },
   {
-    "id": "paco-10",
-    "name": "Xisco",
-    "image": "images/paco-10.svg",
-    "source": "mock"
+    "id": "elena-0002",
+    "name": "Elena",
+    "image": "faces/elena/elena-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "ines-0001",
+    "name": "Inés",
+    "image": "faces/ines/ines-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "ines-0002",
+    "name": "Inés",
+    "image": "faces/ines/ines-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "javier-0001",
+    "name": "Javier",
+    "image": "faces/javier/javier-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "javier-0002",
+    "name": "Javier",
+    "image": "faces/javier/javier-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "lucia-0001",
+    "name": "Lucía",
+    "image": "faces/lucia/lucia-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "lucia-0002",
+    "name": "Lucía",
+    "image": "faces/lucia/lucia-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "marta-0001",
+    "name": "Marta",
+    "image": "faces/marta/marta-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "marta-0002",
+    "name": "Marta",
+    "image": "faces/marta/marta-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "nuria-0001",
+    "name": "Nuria",
+    "image": "faces/nuria/nuria-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "nuria-0002",
+    "name": "Nuria",
+    "image": "faces/nuria/nuria-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "pablo-0001",
+    "name": "Pablo",
+    "image": "faces/pablo/pablo-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "pablo-0002",
+    "name": "Pablo",
+    "image": "faces/pablo/pablo-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "sofia-0001",
+    "name": "Sofía",
+    "image": "faces/sofia/sofia-0001.webp",
+    "source": "dicebear-open-peeps-cc0"
+  },
+  {
+    "id": "sofia-0002",
+    "name": "Sofía",
+    "image": "faces/sofia/sofia-0002.webp",
+    "source": "dicebear-open-peeps-cc0"
   }
 ]

@@ -17,7 +17,7 @@ const router = useRouter()
       <h1 class="mt-3 text-5xl font-black leading-none text-paco-card">¿Quién es este PACO?</h1>
       <p class="mt-4 text-xl font-bold text-paco-accent">Mira la cara. Elige el nombre. Sobrevive.</p>
       <p class="mt-5 text-base leading-7 text-paco-card/85">
-        Cada ronda muestra una cara mock y cuatro nombres posibles. Acierta para mantener la racha;
+        Cada ronda muestra un avatar sintético y cuatro nombres posibles. Acierta para mantener la racha;
         falla tres veces y termina la partida.
       </p>
 
@@ -38,7 +38,7 @@ const router = useRouter()
 
       <p class="mt-5 rounded-md border border-paco-accent/50 p-4 text-sm leading-6 text-paco-card/85">
         Aviso lúdico-científico: esto no reconoce personas reales ni deduce identidades. Solo juega con
-        datos mock y nombres ficticios.
+        avatares sintéticos y nombres ficticios.
       </p>
 
       <PrimaryButton class="mt-7 w-full sm:w-auto" @click="router.push('/play')">Empezar partida</PrimaryButton>
