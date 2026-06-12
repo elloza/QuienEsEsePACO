@@ -38,7 +38,7 @@ export function useDataset() {
     }
   }
 
-  const names = computed(() => Array.from(new Set(faces.value.map((face) => face.name))))
+  const names = computed(() => Array.from(new Set(faces.value.map((face) => face.spanishName))))
 
   const resolveImageUrl = (face: FaceEntry) => `${import.meta.env.BASE_URL}${face.image}`
 

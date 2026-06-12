@@ -2,11 +2,13 @@ import { mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
 
-type NameMap = Record<string, string[]>
+type NameMap = Record<string, string>
 
 type FaceEntry = {
   id: string
-  name: string
+  originalName: string
+  spanishName: string
+  gender: string
   image: string
   source: string
 }
@@ -24,6 +26,19 @@ type PrepareOptions = {
 }
 
 const supportedExtensions = new Set(['.avif', '.heic', '.heif', '.jpeg', '.jpg', '.png', '.svg', '.tif', '.tiff', '.webp'])
+const ignoredDirectories = new Set(['.', 'images', 'image', 'faces', 'face', 'originals', 'dataset', 'names100dataset'])
+const genderAliases = new Map([
+  ['f', 'female'],
+  ['female', 'female'],
+  ['females', 'female'],
+  ['woman', 'female'],
+  ['women', 'female'],
+  ['m', 'male'],
+  ['male', 'male'],
+  ['males', 'male'],
+  ['man', 'male'],
+  ['men', 'male'],
+])
 const minRecommendedBytes = 30 * 1024
 const maxRecommendedBytes = 80 * 1024
 const args = process.argv.slice(2)
@@ -61,7 +76,13 @@ function readOptionalNumberOption(name: string): number | undefined {
   }
 
   const value = Number(args[index + 1])
-  return Number.isFinite(value) && value > 0 ? value : undefined
+  if (Number.isFinite(value) && value > 0) {
+    return value
+  }
+
+  const npmConfigName = `npm_config_${name.replace(/^--/, '').replaceAll('-', '_')}`
+  const npmConfigValue = Number(process.env[npmConfigName])
+  return Number.isFinite(npmConfigValue) && npmConfigValue > 0 ? npmConfigValue : undefined
 }
 
 function hasFlag(name: string): boolean {
@@ -88,38 +109,62 @@ async function readNameMap(nameMapPath: string): Promise<NameMap> {
 }
 
 function resolveSpanishName(sourceName: string, nameMap: NameMap): string {
-  if (nameMap[sourceName]) {
-    return sourceName
+  const direct = nameMap[sourceName]
+  if (direct) {
+    return direct
   }
 
   const normalized = sourceName.toLowerCase()
-  const match = Object.entries(nameMap).find(
-    ([spanishName, aliases]) =>
-      spanishName.toLowerCase() === normalized || aliases.some((alias) => alias.toLowerCase() === normalized),
-  )
-
-  return match?.[0] ?? sourceName
+  const match = Object.entries(nameMap).find(([originalName]) => originalName.toLowerCase() === normalized)
+  return match?.[1] ?? sourceName
 }
 
-async function collectImages(inputDir: string): Promise<Array<{ sourceName: string; filePath: string }>> {
-  const names = await readdir(inputDir, { withFileTypes: true })
-  const images: Array<{ sourceName: string; filePath: string }> = []
+function inferGender(relativeParts: string[]): string {
+  for (const part of relativeParts) {
+    const gender = genderAliases.get(part.toLowerCase())
+    if (gender) {
+      return gender
+    }
+  }
 
-  for (const entry of names) {
-    if (!entry.isDirectory()) {
+  return 'unknown'
+}
+
+function inferSourceName(relativeParts: string[], nameMap: NameMap): string {
+  for (let index = relativeParts.length - 2; index >= 0; index -= 1) {
+    const part = relativeParts[index]
+    const normalized = part.toLowerCase()
+    if (genderAliases.has(normalized) || ignoredDirectories.has(normalized)) {
       continue
     }
 
-    const sourceName = entry.name
-    const sourceDir = path.join(inputDir, sourceName)
-    const files = await readdir(sourceDir, { withFileTypes: true })
+    if (nameMap[part] || Object.keys(nameMap).some((name) => name.toLowerCase() === normalized)) {
+      return part
+    }
+  }
 
-    for (const file of files) {
-      if (!file.isFile() || !supportedExtensions.has(path.extname(file.name).toLowerCase())) {
-        continue
-      }
+  return relativeParts.at(-2) ?? path.parse(relativeParts.at(-1) ?? 'unknown').name
+}
 
-      images.push({ sourceName, filePath: path.join(sourceDir, file.name) })
+async function collectImages(
+  inputDir: string,
+  nameMap: NameMap,
+  currentDir = inputDir,
+): Promise<Array<{ sourceName: string; gender: string; filePath: string }>> {
+  const entries = await readdir(currentDir, { withFileTypes: true })
+  const images: Array<{ sourceName: string; gender: string; filePath: string }> = []
+
+  for (const entry of entries) {
+    const entryPath = path.join(currentDir, entry.name)
+    if (entry.isDirectory()) {
+      images.push(...(await collectImages(inputDir, nameMap, entryPath)))
+    } else if (entry.isFile() && supportedExtensions.has(path.extname(entry.name).toLowerCase())) {
+      const relativeParts = path.relative(inputDir, entryPath).split(path.sep)
+      images.push({
+        sourceName: inferSourceName(relativeParts, nameMap),
+        gender: inferGender(relativeParts),
+        filePath: entryPath,
+      })
     }
   }
 
@@ -128,7 +173,7 @@ async function collectImages(inputDir: string): Promise<Array<{ sourceName: stri
 
 async function prepareDataset(options: PrepareOptions): Promise<void> {
   const nameMap = await readNameMap(options.nameMapPath)
-  const sourceImages = await collectImages(options.inputDir)
+  const sourceImages = await collectImages(options.inputDir, nameMap)
 
   if (sourceImages.length === 0) {
     throw new Error(`No supported images found in ${options.inputDir}`)
@@ -174,7 +219,9 @@ async function prepareDataset(options: PrepareOptions): Promise<void> {
 
     faces.push({
       id,
-      name: spanishName,
+      originalName: image.sourceName,
+      spanishName,
+      gender: image.gender,
       image: relativeImagePath,
       source: options.source,
     })
@@ -182,7 +229,7 @@ async function prepareDataset(options: PrepareOptions): Promise<void> {
     perNameCounts.set(spanishName, nextCount)
   }
 
-  const distinctNames = new Set(faces.map((face) => face.name))
+  const distinctNames = new Set(faces.map((face) => face.spanishName))
   if (distinctNames.size < 4) {
     throw new Error(`Prepared dataset must contain at least 4 distinct names; found ${distinctNames.size}`)
   }

@@ -3,7 +3,9 @@ import path from 'node:path'
 
 type FaceEntry = {
   id: string
-  name: string
+  originalName: string
+  spanishName: string
+  gender: string
   image: string
   source?: string
 }
@@ -72,8 +74,8 @@ async function validateDataset(options: ValidationOptions): Promise<void> {
       fail(`entry ${index} must be an object`)
     }
 
-    if (!face.id || !face.name || !face.image) {
-      fail(`entry ${index} must include id, name, and image`)
+    if (!face.id || !face.originalName || !face.spanishName || !face.gender || !face.image) {
+      fail(`entry ${index} must include id, originalName, spanishName, gender, and image`)
     }
 
     if (ids.has(face.id)) {
@@ -86,7 +88,7 @@ async function validateDataset(options: ValidationOptions): Promise<void> {
     await access(imageFile).catch(() => fail(`image file does not exist: ${face.image}`))
 
     ids.add(face.id)
-    names.add(face.name)
+    names.add(face.spanishName)
   }
 
   if (names.size < options.minNames) {

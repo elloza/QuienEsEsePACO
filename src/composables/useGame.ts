@@ -27,14 +27,14 @@ export function useGame(faces: FaceEntry[], allNames: string[]) {
   const buildQuestion = (): GameQuestion => {
     const face = random.pick(faces)
     const distractors = random
-      .shuffle(allNames.filter((name) => name !== face.name))
+      .shuffle(allNames.filter((name) => name !== face.spanishName))
       .slice(0, gameConfig.optionCount - 1)
-    const options = random.shuffle([face.name, ...distractors])
+    const options = random.shuffle([face.spanishName, ...distractors])
 
     return {
       face,
       options,
-      correctName: face.name,
+      correctName: face.spanishName,
       questionNumber: state.questionNumber,
     }
   }

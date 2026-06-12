@@ -1,6 +1,8 @@
 export interface FaceEntry {
   id: string
-  name: string
+  originalName: string
+  spanishName: string
+  gender: string
   image: string
   source?: string
 }

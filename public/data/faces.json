@@ -1,145 +1,193 @@
 [
   {
     "id": "alejandro-0001",
-    "name": "Alejandro",
+    "originalName": "Alejandro",
+    "spanishName": "Alejandro",
+    "gender": "unknown",
     "image": "faces/alejandro/alejandro-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "alejandro-0002",
-    "name": "Alejandro",
+    "originalName": "Alejandro",
+    "spanishName": "Alejandro",
+    "gender": "unknown",
     "image": "faces/alejandro/alejandro-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "alvaro-0001",
-    "name": "Álvaro",
+    "originalName": "Álvaro",
+    "spanishName": "Álvaro",
+    "gender": "unknown",
     "image": "faces/alvaro/alvaro-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "alvaro-0002",
-    "name": "Álvaro",
+    "originalName": "Álvaro",
+    "spanishName": "Álvaro",
+    "gender": "unknown",
     "image": "faces/alvaro/alvaro-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "carmen-0001",
-    "name": "Carmen",
+    "originalName": "Carmen",
+    "spanishName": "Carmen",
+    "gender": "unknown",
     "image": "faces/carmen/carmen-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "carmen-0002",
-    "name": "Carmen",
+    "originalName": "Carmen",
+    "spanishName": "Carmen",
+    "gender": "unknown",
     "image": "faces/carmen/carmen-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "diego-0001",
-    "name": "Diego",
+    "originalName": "Diego",
+    "spanishName": "Diego",
+    "gender": "unknown",
     "image": "faces/diego/diego-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "diego-0002",
-    "name": "Diego",
+    "originalName": "Diego",
+    "spanishName": "Diego",
+    "gender": "unknown",
     "image": "faces/diego/diego-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "elena-0001",
-    "name": "Elena",
+    "originalName": "Elena",
+    "spanishName": "Elena",
+    "gender": "unknown",
     "image": "faces/elena/elena-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "elena-0002",
-    "name": "Elena",
+    "originalName": "Elena",
+    "spanishName": "Elena",
+    "gender": "unknown",
     "image": "faces/elena/elena-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "ines-0001",
-    "name": "Inés",
+    "originalName": "Inés",
+    "spanishName": "Inés",
+    "gender": "unknown",
     "image": "faces/ines/ines-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "ines-0002",
-    "name": "Inés",
+    "originalName": "Inés",
+    "spanishName": "Inés",
+    "gender": "unknown",
     "image": "faces/ines/ines-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "javier-0001",
-    "name": "Javier",
+    "originalName": "Javier",
+    "spanishName": "Javier",
+    "gender": "unknown",
     "image": "faces/javier/javier-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "javier-0002",
-    "name": "Javier",
+    "originalName": "Javier",
+    "spanishName": "Javier",
+    "gender": "unknown",
     "image": "faces/javier/javier-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "lucia-0001",
-    "name": "Lucía",
+    "originalName": "Lucía",
+    "spanishName": "Lucía",
+    "gender": "unknown",
     "image": "faces/lucia/lucia-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "lucia-0002",
-    "name": "Lucía",
+    "originalName": "Lucía",
+    "spanishName": "Lucía",
+    "gender": "unknown",
     "image": "faces/lucia/lucia-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "marta-0001",
-    "name": "Marta",
+    "originalName": "Marta",
+    "spanishName": "Marta",
+    "gender": "unknown",
     "image": "faces/marta/marta-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "marta-0002",
-    "name": "Marta",
+    "originalName": "Marta",
+    "spanishName": "Marta",
+    "gender": "unknown",
     "image": "faces/marta/marta-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "nuria-0001",
-    "name": "Nuria",
+    "originalName": "Nuria",
+    "spanishName": "Nuria",
+    "gender": "unknown",
     "image": "faces/nuria/nuria-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "nuria-0002",
-    "name": "Nuria",
+    "originalName": "Nuria",
+    "spanishName": "Nuria",
+    "gender": "unknown",
     "image": "faces/nuria/nuria-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "pablo-0001",
-    "name": "Pablo",
+    "originalName": "Pablo",
+    "spanishName": "Pablo",
+    "gender": "unknown",
     "image": "faces/pablo/pablo-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "pablo-0002",
-    "name": "Pablo",
+    "originalName": "Pablo",
+    "spanishName": "Pablo",
+    "gender": "unknown",
     "image": "faces/pablo/pablo-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "sofia-0001",
-    "name": "Sofía",
+    "originalName": "Sofía",
+    "spanishName": "Sofía",
+    "gender": "unknown",
     "image": "faces/sofia/sofia-0001.webp",
     "source": "dicebear-open-peeps-cc0"
   },
   {
     "id": "sofia-0002",
-    "name": "Sofía",
+    "originalName": "Sofía",
+    "spanishName": "Sofía",
+    "gender": "unknown",
     "image": "faces/sofia/sofia-0002.webp",
     "source": "dicebear-open-peeps-cc0"
   }

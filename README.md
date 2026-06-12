@@ -31,9 +31,35 @@ Las imágenes optimizadas están en `public/faces/` como WebP 512x512 px. El man
 
 ### Names100
 
-El dataset candidato es [Names 100 Dataset](https://purl.stanford.edu/tp945cq9122), alojado en Stanford Digital Repository. Stanford indica que la descarga es pública, pero su condición de uso exige no usar el contenido para identificar personas ni vulnerar privacidad/confidencialidad, y advierte que puede estar sujeto a restricciones adicionales del depositante. Mientras no exista una licencia explícita que permita redistribuir y servir las imágenes reales en GitHub Pages, no se deben copiar esas caras a `public/` ni sustituir el mock publicado.
+El dataset candidato es [Names 100 Dataset](https://purl.stanford.edu/tp945cq9122), alojado en Stanford Digital Repository. Su fuente descargable primaria es:
 
-Si obtienes permiso o confirmas una licencia compatible, descarga los originales fuera del repo y colócalos localmente con una carpeta por nombre:
+```text
+https://stacks.stanford.edu/file/tp945cq9122/Names100Dataset.tar.gz
+```
+
+Metadatos relevantes:
+
+- Objeto SDR: `druid:tp945cq9122`.
+- Archivo: `Names100Dataset.tar.gz`.
+- Tamaño declarado: `2352440687` bytes.
+- MD5 declarado: `78660c7fb994c98c50c5e71714057f17`.
+- SHA1 declarado: `5e9f71cd980167aad13b60e858665e3f1ab49bfc`.
+- Acceso del objeto: `view: world`, `download: world`.
+- Contacto del depositante: `hchen2@stanford.edu`.
+
+Conclusión legal operativa: Stanford permite descargar el archivo desde SDR, pero no hay una licencia abierta explícita que autorice republicar o redistribuir las fotos reales. La condición de uso del registro dice que el usuario acepta no usar el contenido para identificar ni vulnerar privacidad/confidencialidad, y advierte que el contenido puede estar sujeto a restricciones adicionales del depositante. Además, los términos generales de Stanford limitan la descarga a uso personal no comercial y prohíben copiar, reproducir, retransmitir, distribuir o publicar material salvo permiso o derecho legal aplicable. Por tanto, este repo no publica caras reales de Names100 en `public/` ni en GitHub Pages.
+
+Para jugar localmente con fotos reales, descarga y extrae el paquete solo en `datasets/`, que está ignorado por Git:
+
+```bash
+mkdir -p datasets/names100
+curl -L "https://stacks.stanford.edu/file/tp945cq9122/Names100Dataset.tar.gz" -o datasets/Names100Dataset.tar.gz
+tar -xzf datasets/Names100Dataset.tar.gz -C datasets/names100
+```
+
+Si obtienes permiso escrito del depositante o confirmas una licencia compatible con redistribución web pública, conserva ese permiso junto a la documentación del proyecto antes de copiar resultados a `public/` para deploy.
+
+El pipeline acepta originales extractados con carpetas anidadas. Intenta inferir `originalName` desde la carpeta de nombre más cercana y `gender` desde segmentos como `male`, `female`, `men` o `women`.
 
 ```text
 datasets/originals/
@@ -52,10 +78,10 @@ datasets/originals/
 
 ### Preparar imágenes optimizadas
 
-El pipeline convierte originales locales a WebP cuadrado de 512x512 px, organiza la salida en `public/faces/<nombre>/<archivo>.webp` y regenera `public/data/faces.json`.
+El pipeline convierte originales locales a WebP cuadrado de 512x512 px, organiza la salida en `public/faces/<nombre-espanol>/<archivo>.webp` y regenera `public/data/faces.json`. El manifiesto conserva `originalName`, `spanishName`, `gender` e `image`; la app solo muestra `spanishName`.
 
 ```bash
-npm run prepare:dataset -- -- --input=datasets/originals --clean --source=names100-local --limit-per-name=20
+npm run prepare:dataset -- -- --input=datasets/names100 --clean --source=names100-local --limit-per-name=20
 npm run validate:dataset
 ```
 
@@ -70,7 +96,9 @@ Opciones útiles:
 - `--limit-per-name`: límite opcional por nombre.
 - `--clean`: borra la carpeta de salida antes de generar.
 
-El validador comprueba que el manifiesto tenga campos requeridos, IDs únicos, rutas relativas sin `/` inicial, imágenes existentes y al menos 4 nombres distintos.
+El validador comprueba que el manifiesto tenga `id`, `originalName`, `spanishName`, `gender`, `image`, IDs únicos, rutas relativas sin `/` inicial, imágenes existentes y al menos 4 nombres distintos.
+
+`public/data/name-map.json` contiene equivalencias inglés→español para nombres frecuentes. Si el preparador encuentra un `originalName` que no está en el mapa, conserva ese nombre como `spanishName`; añade la equivalencia antes de preparar de nuevo si quieres una adaptación española concreta.
 
 ## Deploy
 
