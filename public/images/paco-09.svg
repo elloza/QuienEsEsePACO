@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="Retrato mock 9">
-  <rect width="360" height="360" fill="#FCA5A5"/>
-  <circle cx="180" cy="157" r="89" fill="#EAB08C"/>
-  <path d="M91 146c8-60 45-91 89-91s82 31 89 91c-55-29-113-29-178 0z" fill="#1F2937"/>
-  <circle cx="149" cy="160" r="10" fill="#14112B"/>
-  <circle cx="213" cy="160" r="10" fill="#14112B"/>
-  <path d="M149 208c22 14 44 14 66 0" fill="none" stroke="#14112B" stroke-width="10" stroke-linecap="round"/>
-  <path d="M101 322c20-56 55-86 79-86s59 30 79 86z" fill="#5DE0E6"/>
-</svg>
