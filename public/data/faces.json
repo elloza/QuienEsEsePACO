@@ -1,194 +1,770 @@
 [
   {
-    "id": "alejandro-0001",
-    "originalName": "Alejandro",
-    "spanishName": "Alejandro",
-    "gender": "unknown",
-    "image": "faces/alejandro/alejandro-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "amanda-0001",
+    "originalName": "Amanda",
+    "spanishName": "Amanda",
+    "gender": "female",
+    "image": "faces/amanda/amanda-0001.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "alejandro-0002",
-    "originalName": "Alejandro",
-    "spanishName": "Alejandro",
-    "gender": "unknown",
-    "image": "faces/alejandro/alejandro-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "amanda-0002",
+    "originalName": "Amanda",
+    "spanishName": "Amanda",
+    "gender": "female",
+    "image": "faces/amanda/amanda-0002.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "alvaro-0001",
-    "originalName": "Álvaro",
-    "spanishName": "Álvaro",
-    "gender": "unknown",
-    "image": "faces/alvaro/alvaro-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "amanda-0003",
+    "originalName": "Amanda",
+    "spanishName": "Amanda",
+    "gender": "female",
+    "image": "faces/amanda/amanda-0003.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "alvaro-0002",
-    "originalName": "Álvaro",
-    "spanishName": "Álvaro",
-    "gender": "unknown",
-    "image": "faces/alvaro/alvaro-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "amanda-0004",
+    "originalName": "Amanda",
+    "spanishName": "Amanda",
+    "gender": "female",
+    "image": "faces/amanda/amanda-0004.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "carmen-0001",
-    "originalName": "Carmen",
-    "spanishName": "Carmen",
-    "gender": "unknown",
-    "image": "faces/carmen/carmen-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "amanda-0005",
+    "originalName": "Amanda",
+    "spanishName": "Amanda",
+    "gender": "female",
+    "image": "faces/amanda/amanda-0005.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "carmen-0002",
-    "originalName": "Carmen",
-    "spanishName": "Carmen",
-    "gender": "unknown",
-    "image": "faces/carmen/carmen-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "amanda-0006",
+    "originalName": "Amanda",
+    "spanishName": "Amanda",
+    "gender": "female",
+    "image": "faces/amanda/amanda-0006.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "diego-0001",
-    "originalName": "Diego",
-    "spanishName": "Diego",
-    "gender": "unknown",
-    "image": "faces/diego/diego-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "amanda-0007",
+    "originalName": "Amanda",
+    "spanishName": "Amanda",
+    "gender": "female",
+    "image": "faces/amanda/amanda-0007.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "diego-0002",
-    "originalName": "Diego",
-    "spanishName": "Diego",
-    "gender": "unknown",
-    "image": "faces/diego/diego-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "amanda-0008",
+    "originalName": "Amanda",
+    "spanishName": "Amanda",
+    "gender": "female",
+    "image": "faces/amanda/amanda-0008.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "elena-0001",
-    "originalName": "Elena",
-    "spanishName": "Elena",
-    "gender": "unknown",
-    "image": "faces/elena/elena-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "angela-0001",
+    "originalName": "Angela",
+    "spanishName": "Ángela",
+    "gender": "female",
+    "image": "faces/angela/angela-0001.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "elena-0002",
-    "originalName": "Elena",
-    "spanishName": "Elena",
-    "gender": "unknown",
-    "image": "faces/elena/elena-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "angela-0002",
+    "originalName": "Angela",
+    "spanishName": "Ángela",
+    "gender": "female",
+    "image": "faces/angela/angela-0002.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "ines-0001",
-    "originalName": "Inés",
-    "spanishName": "Inés",
-    "gender": "unknown",
-    "image": "faces/ines/ines-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "angela-0003",
+    "originalName": "Angela",
+    "spanishName": "Ángela",
+    "gender": "female",
+    "image": "faces/angela/angela-0003.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "ines-0002",
-    "originalName": "Inés",
-    "spanishName": "Inés",
-    "gender": "unknown",
-    "image": "faces/ines/ines-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "angela-0004",
+    "originalName": "Angela",
+    "spanishName": "Ángela",
+    "gender": "female",
+    "image": "faces/angela/angela-0004.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "javier-0001",
-    "originalName": "Javier",
-    "spanishName": "Javier",
-    "gender": "unknown",
-    "image": "faces/javier/javier-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "angela-0005",
+    "originalName": "Angela",
+    "spanishName": "Ángela",
+    "gender": "female",
+    "image": "faces/angela/angela-0005.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "javier-0002",
-    "originalName": "Javier",
-    "spanishName": "Javier",
-    "gender": "unknown",
-    "image": "faces/javier/javier-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "angela-0006",
+    "originalName": "Angela",
+    "spanishName": "Ángela",
+    "gender": "female",
+    "image": "faces/angela/angela-0006.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "lucia-0001",
-    "originalName": "Lucía",
-    "spanishName": "Lucía",
-    "gender": "unknown",
-    "image": "faces/lucia/lucia-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "angela-0007",
+    "originalName": "Angela",
+    "spanishName": "Ángela",
+    "gender": "female",
+    "image": "faces/angela/angela-0007.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "lucia-0002",
-    "originalName": "Lucía",
-    "spanishName": "Lucía",
-    "gender": "unknown",
-    "image": "faces/lucia/lucia-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "angela-0008",
+    "originalName": "Angela",
+    "spanishName": "Ángela",
+    "gender": "female",
+    "image": "faces/angela/angela-0008.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "marta-0001",
-    "originalName": "Marta",
-    "spanishName": "Marta",
-    "gender": "unknown",
-    "image": "faces/marta/marta-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "ana-0001",
+    "originalName": "Anna",
+    "spanishName": "Ana",
+    "gender": "female",
+    "image": "faces/ana/ana-0001.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "marta-0002",
-    "originalName": "Marta",
-    "spanishName": "Marta",
-    "gender": "unknown",
-    "image": "faces/marta/marta-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "ana-0002",
+    "originalName": "Anna",
+    "spanishName": "Ana",
+    "gender": "female",
+    "image": "faces/ana/ana-0002.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "nuria-0001",
-    "originalName": "Nuria",
-    "spanishName": "Nuria",
-    "gender": "unknown",
-    "image": "faces/nuria/nuria-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "ana-0003",
+    "originalName": "Anna",
+    "spanishName": "Ana",
+    "gender": "female",
+    "image": "faces/ana/ana-0003.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "nuria-0002",
-    "originalName": "Nuria",
-    "spanishName": "Nuria",
-    "gender": "unknown",
-    "image": "faces/nuria/nuria-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "ana-0004",
+    "originalName": "Anna",
+    "spanishName": "Ana",
+    "gender": "female",
+    "image": "faces/ana/ana-0004.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "pablo-0001",
-    "originalName": "Pablo",
-    "spanishName": "Pablo",
-    "gender": "unknown",
-    "image": "faces/pablo/pablo-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "ana-0005",
+    "originalName": "Anna",
+    "spanishName": "Ana",
+    "gender": "female",
+    "image": "faces/ana/ana-0005.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "pablo-0002",
-    "originalName": "Pablo",
-    "spanishName": "Pablo",
-    "gender": "unknown",
-    "image": "faces/pablo/pablo-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "ana-0006",
+    "originalName": "Anna",
+    "spanishName": "Ana",
+    "gender": "female",
+    "image": "faces/ana/ana-0006.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "sofia-0001",
-    "originalName": "Sofía",
-    "spanishName": "Sofía",
-    "gender": "unknown",
-    "image": "faces/sofia/sofia-0001.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "ana-0007",
+    "originalName": "Anna",
+    "spanishName": "Ana",
+    "gender": "female",
+    "image": "faces/ana/ana-0007.webp",
+    "source": "stanford-names100"
   },
   {
-    "id": "sofia-0002",
-    "originalName": "Sofía",
-    "spanishName": "Sofía",
-    "gender": "unknown",
-    "image": "faces/sofia/sofia-0002.webp",
-    "source": "dicebear-open-peeps-cc0"
+    "id": "ana-0008",
+    "originalName": "Anna",
+    "spanishName": "Ana",
+    "gender": "female",
+    "image": "faces/ana/ana-0008.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "barbara-0001",
+    "originalName": "Barbara",
+    "spanishName": "Bárbara",
+    "gender": "female",
+    "image": "faces/barbara/barbara-0001.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "barbara-0002",
+    "originalName": "Barbara",
+    "spanishName": "Bárbara",
+    "gender": "female",
+    "image": "faces/barbara/barbara-0002.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "barbara-0003",
+    "originalName": "Barbara",
+    "spanishName": "Bárbara",
+    "gender": "female",
+    "image": "faces/barbara/barbara-0003.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "barbara-0004",
+    "originalName": "Barbara",
+    "spanishName": "Bárbara",
+    "gender": "female",
+    "image": "faces/barbara/barbara-0004.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "barbara-0005",
+    "originalName": "Barbara",
+    "spanishName": "Bárbara",
+    "gender": "female",
+    "image": "faces/barbara/barbara-0005.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "barbara-0006",
+    "originalName": "Barbara",
+    "spanishName": "Bárbara",
+    "gender": "female",
+    "image": "faces/barbara/barbara-0006.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "barbara-0007",
+    "originalName": "Barbara",
+    "spanishName": "Bárbara",
+    "gender": "female",
+    "image": "faces/barbara/barbara-0007.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "barbara-0008",
+    "originalName": "Barbara",
+    "spanishName": "Bárbara",
+    "gender": "female",
+    "image": "faces/barbara/barbara-0008.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "isabel-0001",
+    "originalName": "Elizabeth",
+    "spanishName": "Isabel",
+    "gender": "female",
+    "image": "faces/isabel/isabel-0001.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "isabel-0002",
+    "originalName": "Elizabeth",
+    "spanishName": "Isabel",
+    "gender": "female",
+    "image": "faces/isabel/isabel-0002.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "isabel-0003",
+    "originalName": "Elizabeth",
+    "spanishName": "Isabel",
+    "gender": "female",
+    "image": "faces/isabel/isabel-0003.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "isabel-0004",
+    "originalName": "Elizabeth",
+    "spanishName": "Isabel",
+    "gender": "female",
+    "image": "faces/isabel/isabel-0004.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "isabel-0005",
+    "originalName": "Elizabeth",
+    "spanishName": "Isabel",
+    "gender": "female",
+    "image": "faces/isabel/isabel-0005.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "isabel-0006",
+    "originalName": "Elizabeth",
+    "spanishName": "Isabel",
+    "gender": "female",
+    "image": "faces/isabel/isabel-0006.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "isabel-0007",
+    "originalName": "Elizabeth",
+    "spanishName": "Isabel",
+    "gender": "female",
+    "image": "faces/isabel/isabel-0007.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "isabel-0008",
+    "originalName": "Elizabeth",
+    "spanishName": "Isabel",
+    "gender": "female",
+    "image": "faces/isabel/isabel-0008.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "linda-0001",
+    "originalName": "Linda",
+    "spanishName": "Linda",
+    "gender": "female",
+    "image": "faces/linda/linda-0001.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "linda-0002",
+    "originalName": "Linda",
+    "spanishName": "Linda",
+    "gender": "female",
+    "image": "faces/linda/linda-0002.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "linda-0003",
+    "originalName": "Linda",
+    "spanishName": "Linda",
+    "gender": "female",
+    "image": "faces/linda/linda-0003.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "linda-0004",
+    "originalName": "Linda",
+    "spanishName": "Linda",
+    "gender": "female",
+    "image": "faces/linda/linda-0004.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "linda-0005",
+    "originalName": "Linda",
+    "spanishName": "Linda",
+    "gender": "female",
+    "image": "faces/linda/linda-0005.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "linda-0006",
+    "originalName": "Linda",
+    "spanishName": "Linda",
+    "gender": "female",
+    "image": "faces/linda/linda-0006.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "linda-0007",
+    "originalName": "Linda",
+    "spanishName": "Linda",
+    "gender": "female",
+    "image": "faces/linda/linda-0007.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "linda-0008",
+    "originalName": "Linda",
+    "spanishName": "Linda",
+    "gender": "female",
+    "image": "faces/linda/linda-0008.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "aaron-0001",
+    "originalName": "Aaron",
+    "spanishName": "Aarón",
+    "gender": "male",
+    "image": "faces/aaron/aaron-0001.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "aaron-0002",
+    "originalName": "Aaron",
+    "spanishName": "Aarón",
+    "gender": "male",
+    "image": "faces/aaron/aaron-0002.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "aaron-0003",
+    "originalName": "Aaron",
+    "spanishName": "Aarón",
+    "gender": "male",
+    "image": "faces/aaron/aaron-0003.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "aaron-0004",
+    "originalName": "Aaron",
+    "spanishName": "Aarón",
+    "gender": "male",
+    "image": "faces/aaron/aaron-0004.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "aaron-0005",
+    "originalName": "Aaron",
+    "spanishName": "Aarón",
+    "gender": "male",
+    "image": "faces/aaron/aaron-0005.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "aaron-0006",
+    "originalName": "Aaron",
+    "spanishName": "Aarón",
+    "gender": "male",
+    "image": "faces/aaron/aaron-0006.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "aaron-0007",
+    "originalName": "Aaron",
+    "spanishName": "Aarón",
+    "gender": "male",
+    "image": "faces/aaron/aaron-0007.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "aaron-0008",
+    "originalName": "Aaron",
+    "spanishName": "Aarón",
+    "gender": "male",
+    "image": "faces/aaron/aaron-0008.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "antonio-0001",
+    "originalName": "Anthony",
+    "spanishName": "Antonio",
+    "gender": "male",
+    "image": "faces/antonio/antonio-0001.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "antonio-0002",
+    "originalName": "Anthony",
+    "spanishName": "Antonio",
+    "gender": "male",
+    "image": "faces/antonio/antonio-0002.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "antonio-0003",
+    "originalName": "Anthony",
+    "spanishName": "Antonio",
+    "gender": "male",
+    "image": "faces/antonio/antonio-0003.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "antonio-0004",
+    "originalName": "Anthony",
+    "spanishName": "Antonio",
+    "gender": "male",
+    "image": "faces/antonio/antonio-0004.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "antonio-0005",
+    "originalName": "Anthony",
+    "spanishName": "Antonio",
+    "gender": "male",
+    "image": "faces/antonio/antonio-0005.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "antonio-0006",
+    "originalName": "Anthony",
+    "spanishName": "Antonio",
+    "gender": "male",
+    "image": "faces/antonio/antonio-0006.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "antonio-0007",
+    "originalName": "Anthony",
+    "spanishName": "Antonio",
+    "gender": "male",
+    "image": "faces/antonio/antonio-0007.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "antonio-0008",
+    "originalName": "Anthony",
+    "spanishName": "Antonio",
+    "gender": "male",
+    "image": "faces/antonio/antonio-0008.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "bruno-0001",
+    "originalName": "Brian",
+    "spanishName": "Bruno",
+    "gender": "male",
+    "image": "faces/bruno/bruno-0001.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "bruno-0002",
+    "originalName": "Brian",
+    "spanishName": "Bruno",
+    "gender": "male",
+    "image": "faces/bruno/bruno-0002.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "bruno-0003",
+    "originalName": "Brian",
+    "spanishName": "Bruno",
+    "gender": "male",
+    "image": "faces/bruno/bruno-0003.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "bruno-0004",
+    "originalName": "Brian",
+    "spanishName": "Bruno",
+    "gender": "male",
+    "image": "faces/bruno/bruno-0004.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "bruno-0005",
+    "originalName": "Brian",
+    "spanishName": "Bruno",
+    "gender": "male",
+    "image": "faces/bruno/bruno-0005.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "bruno-0006",
+    "originalName": "Brian",
+    "spanishName": "Bruno",
+    "gender": "male",
+    "image": "faces/bruno/bruno-0006.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "bruno-0007",
+    "originalName": "Brian",
+    "spanishName": "Bruno",
+    "gender": "male",
+    "image": "faces/bruno/bruno-0007.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "bruno-0008",
+    "originalName": "Brian",
+    "spanishName": "Bruno",
+    "gender": "male",
+    "image": "faces/bruno/bruno-0008.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "david-0001",
+    "originalName": "David",
+    "spanishName": "David",
+    "gender": "male",
+    "image": "faces/david/david-0001.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "david-0002",
+    "originalName": "David",
+    "spanishName": "David",
+    "gender": "male",
+    "image": "faces/david/david-0002.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "david-0003",
+    "originalName": "David",
+    "spanishName": "David",
+    "gender": "male",
+    "image": "faces/david/david-0003.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "david-0004",
+    "originalName": "David",
+    "spanishName": "David",
+    "gender": "male",
+    "image": "faces/david/david-0004.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "david-0005",
+    "originalName": "David",
+    "spanishName": "David",
+    "gender": "male",
+    "image": "faces/david/david-0005.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "david-0006",
+    "originalName": "David",
+    "spanishName": "David",
+    "gender": "male",
+    "image": "faces/david/david-0006.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "david-0007",
+    "originalName": "David",
+    "spanishName": "David",
+    "gender": "male",
+    "image": "faces/david/david-0007.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "david-0008",
+    "originalName": "David",
+    "spanishName": "David",
+    "gender": "male",
+    "image": "faces/david/david-0008.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jaime-0001",
+    "originalName": "James",
+    "spanishName": "Jaime",
+    "gender": "male",
+    "image": "faces/jaime/jaime-0001.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jaime-0002",
+    "originalName": "James",
+    "spanishName": "Jaime",
+    "gender": "male",
+    "image": "faces/jaime/jaime-0002.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jaime-0003",
+    "originalName": "James",
+    "spanishName": "Jaime",
+    "gender": "male",
+    "image": "faces/jaime/jaime-0003.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jaime-0004",
+    "originalName": "James",
+    "spanishName": "Jaime",
+    "gender": "male",
+    "image": "faces/jaime/jaime-0004.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jaime-0005",
+    "originalName": "James",
+    "spanishName": "Jaime",
+    "gender": "male",
+    "image": "faces/jaime/jaime-0005.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jaime-0006",
+    "originalName": "James",
+    "spanishName": "Jaime",
+    "gender": "male",
+    "image": "faces/jaime/jaime-0006.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jaime-0007",
+    "originalName": "James",
+    "spanishName": "Jaime",
+    "gender": "male",
+    "image": "faces/jaime/jaime-0007.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jaime-0008",
+    "originalName": "James",
+    "spanishName": "Jaime",
+    "gender": "male",
+    "image": "faces/jaime/jaime-0008.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jose-0001",
+    "originalName": "Joseph",
+    "spanishName": "José",
+    "gender": "male",
+    "image": "faces/jose/jose-0001.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jose-0002",
+    "originalName": "Joseph",
+    "spanishName": "José",
+    "gender": "male",
+    "image": "faces/jose/jose-0002.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jose-0003",
+    "originalName": "Joseph",
+    "spanishName": "José",
+    "gender": "male",
+    "image": "faces/jose/jose-0003.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jose-0004",
+    "originalName": "Joseph",
+    "spanishName": "José",
+    "gender": "male",
+    "image": "faces/jose/jose-0004.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jose-0005",
+    "originalName": "Joseph",
+    "spanishName": "José",
+    "gender": "male",
+    "image": "faces/jose/jose-0005.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jose-0006",
+    "originalName": "Joseph",
+    "spanishName": "José",
+    "gender": "male",
+    "image": "faces/jose/jose-0006.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jose-0007",
+    "originalName": "Joseph",
+    "spanishName": "José",
+    "gender": "male",
+    "image": "faces/jose/jose-0007.webp",
+    "source": "stanford-names100"
+  },
+  {
+    "id": "jose-0008",
+    "originalName": "Joseph",
+    "spanishName": "José",
+    "gender": "male",
+    "image": "faces/jose/jose-0008.webp",
+    "source": "stanford-names100"
   }
 ]
