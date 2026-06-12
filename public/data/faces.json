@@ -1,0 +1,62 @@
+[
+  {
+    "id": "paco-01",
+    "name": "Francisco",
+    "image": "images/paco-01.svg",
+    "source": "mock"
+  },
+  {
+    "id": "paco-02",
+    "name": "Paco",
+    "image": "images/paco-02.svg",
+    "source": "mock"
+  },
+  {
+    "id": "paco-03",
+    "name": "Francis",
+    "image": "images/paco-03.svg",
+    "source": "mock"
+  },
+  {
+    "id": "paco-04",
+    "name": "Curro",
+    "image": "images/paco-04.svg",
+    "source": "mock"
+  },
+  {
+    "id": "paco-05",
+    "name": "Fran",
+    "image": "images/paco-05.svg",
+    "source": "mock"
+  },
+  {
+    "id": "paco-06",
+    "name": "Quico",
+    "image": "images/paco-06.svg",
+    "source": "mock"
+  },
+  {
+    "id": "paco-07",
+    "name": "Pancho",
+    "image": "images/paco-07.svg",
+    "source": "mock"
+  },
+  {
+    "id": "paco-08",
+    "name": "Cisco",
+    "image": "images/paco-08.svg",
+    "source": "mock"
+  },
+  {
+    "id": "paco-09",
+    "name": "Paquito",
+    "image": "images/paco-09.svg",
+    "source": "mock"
+  },
+  {
+    "id": "paco-10",
+    "name": "Xisco",
+    "image": "images/paco-10.svg",
+    "source": "mock"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "Francisco": ["Paco", "Fran", "Curro", "Quico", "Pancho", "Cisco", "Xisco"],
+  "Paco": ["Francisco", "Paquito"],
+  "Fran": ["Francisco", "Francis"],
+  "Curro": ["Francisco"],
+  "Quico": ["Francisco"],
+  "Pancho": ["Francisco"],
+  "Cisco": ["Francisco"],
+  "Xisco": ["Francisco"],
+  "Paquito": ["Paco", "Francisco"]
+}
