@@ -5,9 +5,53 @@ import { useSeededRandom } from '@/composables/useSeededRandom'
 import type { FaceEntry, GameQuestion, GameResult, GameState } from '@/types/game'
 
 const storageKey = 'paco:lastResult'
+const knownGenders = new Set(['male', 'female'])
+
+function addUnique(target: string[], names: string[]) {
+  for (const name of names) {
+    if (!target.includes(name)) {
+      target.push(name)
+    }
+  }
+}
 
 export function useGame(faces: FaceEntry[], allNames: string[]) {
   const random = useSeededRandom()
+  const distinctNames = Array.from(new Set(allNames))
+  const namesByGender = faces.reduce((names, face) => {
+    const gender = face.gender.toLowerCase()
+    const genderNames = names.get(gender) ?? []
+
+    addUnique(genderNames, [face.spanishName])
+    names.set(gender, genderNames)
+
+    return names
+  }, new Map<string, string[]>())
+
+  const optionPoolForFace = (face: FaceEntry) => {
+    const gender = face.gender.toLowerCase()
+    const sameGenderNames = namesByGender.get(gender) ?? []
+
+    if (knownGenders.has(gender) && sameGenderNames.length >= gameConfig.optionCount) {
+      return sameGenderNames
+    }
+
+    const fallbackNames: string[] = []
+
+    if (knownGenders.has(gender)) {
+      addUnique(fallbackNames, sameGenderNames)
+    }
+
+    if (fallbackNames.length < gameConfig.optionCount) {
+      addUnique(fallbackNames, namesByGender.get('unknown') ?? [])
+    }
+
+    if (fallbackNames.length < gameConfig.optionCount) {
+      addUnique(fallbackNames, distinctNames)
+    }
+
+    return fallbackNames
+  }
 
   const state = reactive<GameState>({
     lives: gameConfig.initialLives,
@@ -26,8 +70,9 @@ export function useGame(faces: FaceEntry[], allNames: string[]) {
 
   const buildQuestion = (): GameQuestion => {
     const face = random.pick(faces)
+    const optionPool = optionPoolForFace(face)
     const distractors = random
-      .shuffle(allNames.filter((name) => name !== face.spanishName))
+      .shuffle(optionPool.filter((name) => name !== face.spanishName))
       .slice(0, gameConfig.optionCount - 1)
     const options = random.shuffle([face.spanishName, ...distractors])
 

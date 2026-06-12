@@ -14,8 +14,11 @@ type ValidationOptions = {
   manifestPath: string
   publicDir: string
   minNames: number
+  minNamesPerKnownGender: number
 }
 
+const knownGenders = ['male', 'female'] as const
+const allowedGenders = new Set([...knownGenders, 'unknown'])
 const args = process.argv.slice(2)
 
 function readOption(name: string, fallback: string): string {
@@ -68,6 +71,8 @@ async function validateDataset(options: ValidationOptions): Promise<void> {
 
   const ids = new Set<string>()
   const names = new Set<string>()
+  const genderByName = new Map<string, string>()
+  const namesByGender = new Map<string, Set<string>>()
 
   for (const [index, face] of faces.entries()) {
     if (!face || typeof face !== 'object') {
@@ -82,6 +87,15 @@ async function validateDataset(options: ValidationOptions): Promise<void> {
       fail(`duplicate id: ${face.id}`)
     }
 
+    if (!allowedGenders.has(face.gender)) {
+      fail(`entry ${index} has unsupported gender "${face.gender}"; expected male, female, or unknown`)
+    }
+
+    const existingGender = genderByName.get(face.spanishName)
+    if (existingGender && existingGender !== face.gender) {
+      fail(`name "${face.spanishName}" appears with multiple genders: ${existingGender}, ${face.gender}`)
+    }
+
     assertRelativePublicPath(face.image)
 
     const imageFile = path.join(options.publicDir, ...face.image.split('/'))
@@ -89,17 +103,33 @@ async function validateDataset(options: ValidationOptions): Promise<void> {
 
     ids.add(face.id)
     names.add(face.spanishName)
+    genderByName.set(face.spanishName, face.gender)
+
+    const genderNames = namesByGender.get(face.gender) ?? new Set<string>()
+    genderNames.add(face.spanishName)
+    namesByGender.set(face.gender, genderNames)
   }
 
   if (names.size < options.minNames) {
     fail(`expected at least ${options.minNames} distinct names, found ${names.size}`)
   }
 
-  console.log(`Dataset validation OK: ${faces.length} faces, ${names.size} names`)
+  for (const gender of knownGenders) {
+    const genderNameCount = namesByGender.get(gender)?.size ?? 0
+    if (genderNameCount < options.minNamesPerKnownGender) {
+      fail(
+        `expected at least ${options.minNamesPerKnownGender} distinct ${gender} names for same-gender options, found ${genderNameCount}`,
+      )
+    }
+  }
+
+  const genderSummary = knownGenders.map((gender) => `${namesByGender.get(gender)?.size ?? 0} ${gender}`).join(', ')
+  console.log(`Dataset validation OK: ${faces.length} faces, ${names.size} names (${genderSummary})`)
 }
 
 await validateDataset({
   manifestPath: path.resolve(readOption('--manifest', 'public/data/faces.json')),
   publicDir: path.resolve(readOption('--public-dir', 'public')),
   minNames: readNumberOption('--min-names', 4),
+  minNamesPerKnownGender: readNumberOption('--min-names-per-known-gender', 4),
 })
